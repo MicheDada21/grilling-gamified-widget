@@ -1,0 +1,10 @@
+{
+  "name": "widget-gamification",
+  "description": "Gamifies a widget with the client's own tools: varied question forms, open and closed answers, rounds with real unlocks and a self-evident layout. Use when building or improving a question widget.",
+  "author": {
+    "name": "Tiziano Boccaccini"
+  },
+  "homepage": "https://www.cryptohelvetia.com/ch-labs/prompt-library/skills/widget-gamification",
+  "repository": "https://github.com/MicheDada21/widget-gamification",
+  "license": "MIT"
+}
