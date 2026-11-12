@@ -1,6 +1,6 @@
 {
   "name": "widget-gamification",
-  "description": "Gamifies a widget with the client's own tools: varied question forms, open and closed answers, rounds with real unlocks and a self-evident layout. Use when building or improving a question widget.",
+  "description": "Gamifies a widget with the client's own tools: questions grounded in the codebase, varied forms, open and closed answers, live progress and real unlocks. Use when building or improving a question widget.",
   "author": {
     "name": "Tiziano Boccaccini"
   },

@@ -1,6 +1,6 @@
 ---
 name: widget-gamification
-description: "Gamifies a widget with the client's own tools: varied question forms, open and closed answers, rounds with real unlocks and a self-evident layout. Use when building or improving a question widget."
+description: "Gamifies a widget with the client's own tools: questions grounded in the codebase, varied forms, open and closed answers, live progress and real unlocks. Use when building or improving a question widget."
 ---
 
 # Widget gamification
@@ -10,6 +10,14 @@ description: "Gamifies a widget with the client's own tools: varied question for
 The widget is the interactive surface this conversation is about: a question widget you are about to show, one already shown, or one a skill or project asks you to build. With several candidates or none, ask which one and wait.
 
 The skill changes how the widget asks. What it collects stays fixed: every decision the original needed still gets an answer. A mechanic earns its place by getting a better answer or a faster one. The user's always-loaded rules for widgets, such as their language or a recommended option first, outrank this skill.
+
+## Read the ground
+
+Before writing a question, do the due diligence on what the user wants to act on: read the conversation, the files and history the request touches, and the decisions already recorded there. With no target given, survey the whole codebase, then open the widget by asking what the user wants to improve, with options drawn from what the survey found.
+
+Everything the ground answers leaves the widget. Each remaining question is built on something you found: a real name, a real file, a real conflict between two parts.
+
+The step is done when no question could be answered by reading the codebase or the conversation.
 
 ## Pick the surface
 
@@ -41,8 +49,10 @@ Give each question the form that matches the shape of its answer.
 | A name, a nuance, a reason | One open line |
 | No strong view | A wildcard that hands the choice to you |
 
-- Draw the options from the project itself: real names, real copy, real previews.
-- Alternate closed and open. Open each round with a closed question that takes one tap. Keep open questions to about one in three, one line each, with a placeholder that shows the grain of answer you want. Every closed question offers a free-text way out.
+- One decision per question. Its options lead to different work, so each pick changes what you do next.
+- Ask about outcomes the user can judge, and keep the choice of means for yourself unless it changes cost or risk.
+- Draw the options from the ground: real names, real copy, real previews.
+- Alternate closed and open. Open each round with a closed question that takes one tap. Keep open questions to about one in three, each a field that starts as one line and grows with the answer, with a placeholder that shows the grain of answer you want. Every closed question offers a free-text way out.
 - Within a round, neighbouring questions use different forms.
 - Where the surface can branch, a later question asks about the consequence of an earlier pick instead of a fresh preference.
 - Put your own pick first and mark it.
@@ -51,9 +61,11 @@ The step is done when every original decision maps to a question and each form f
 
 ## Add the game
 
-- **Rounds.** Group the questions into rounds of three to five. The first round alone is enough to proceed. Each further round is optional and is named by what it unlocks.
+Play at full by default: every answer gets a visible reaction at once. The bar moves, the next question reveals, an unlock opens. When the user asks for a quieter widget, keep the mechanics and drop the motion.
+
+- **Progress.** Keep it in view as shape: dots, steps, a filling bar. It moves on every answer and shows the distance to the next unlock.
 - **Unlocks.** An incentive option carries its reward on its face in a few words: an extra variant, a preview, a deeper plan, a bonus round. Finishing a round can carry one too. Promise only what you will deliver in this session.
-- **Progress.** Show it as shape: dots, steps, a filling bar.
+- **Rounds.** Group the questions into rounds of three to five. The first round alone is enough to proceed. Each further round is optional, shorter than the first and named by what it unlocks.
 - **Wildcard.** Picking the wildcard counts as a full answer and moves the round on.
 - **Payoff.** After submit, the reward is the result: one screen showing what the answers unlocked.
 
