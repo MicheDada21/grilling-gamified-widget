@@ -1,9 +1,9 @@
 ---
-name: widget-gamification
+name: grilling-gamified-widget
 description: "Gamifies a widget with the client's own tools: questions grounded in the codebase, varied forms, open and closed answers, live progress and real unlocks. Use when building or improving a question widget."
 ---
 
-# Widget gamification
+# Grilling gamified widget
 
 ## Scope
 
