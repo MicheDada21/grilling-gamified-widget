@@ -1,6 +1,6 @@
 ---
 name: grilling-gamified-widget
-description: "Gamifies a widget with the client's own tools: questions grounded in the codebase, varied forms, open and closed answers, live progress and real unlocks. Use when building or improving a question widget."
+description: "Builds a visually gamified decision widget with the client's rendering tools: grounded questions, responsive graphics, progress and real unlocks. Use when creating or improving a question widget."
 ---
 
 # Grilling gamified widget
@@ -9,7 +9,7 @@ description: "Gamifies a widget with the client's own tools: questions grounded 
 
 The widget is the question surface this conversation is about: one you are about to show, one already shown, or one a skill or project asks you to build. Infer the target from context; ask when ambiguity would change the work.
 
-The widget helps the user make informed decisions with less effort. Preserve the decisions the original needed. Choose the questions, forms and mechanics with judgment: a mechanic earns its place by getting a better answer or a faster one. The user's always-loaded rules for widgets outrank this skill.
+The result is a visibly gamified interactive widget that helps the user make informed decisions with less effort. Its graphics and game-like interaction are essential. Preserve the decisions the original needed; choose the visual design, forms and mechanics freely to serve them. The user's always-loaded rules for widgets outrank this skill.
 
 ## Read the ground
 
@@ -35,15 +35,15 @@ Keep settled decisions, delegated choices, assumptions and unresolved questions 
 
 ## Pick the surface
 
-Check the available tools and read the instructions of the surface you choose. Use the simplest surface that supports the interaction well.
+Check the available rendering tools and read the instructions of the surface you choose. Prefer a custom rendered widget, including for closed choices. Where available, load the client's visualization skill, such as `visualize`, and follow its rendering and answer-submission contract.
 
-| The questions need | Surface |
+| Available capability | Surface |
 | --- | --- |
-| A few closed choices | Native question tool |
-| Sliders, ranking, live previews, reveals, rounds | Widget renderer |
-| Any of these, with no renderer in the client | Standalone HTML page whose main button copies the answers as one message |
+| Inline visualization or artifact renderer | Custom interactive widget displayed in the conversation |
+| No inline renderer | Self-contained HTML page made accessible through a supported preview or file link, with a main action that copies the answers as one message |
+| Brief setup, required approvals, or neither route is usable | Native question tool; state the rendering limitation when it is the fallback |
 
-Chain surfaces when it helps. The tools determine what is possible; the decision determines what is useful.
+Native questions can prepare the game; the main experience belongs on the rendered surface whenever available.
 
 ## Shape the questions
 
@@ -56,12 +56,12 @@ Match each form to its answer: choices, ranking, sliders, open text or previews.
 
 ## Add the game
 
-Make participation feel responsive. Scale the game to the decision: immediate feedback may be enough for a quick choice; a deeper task can earn progress, reveals, rounds and unlocks. Invent mechanics when they help. Respect the user's pace and motion preferences.
+Every answer gets an immediate visible reaction: a selection changes, progress advances, a question reveals or an unlock opens. Keep the game compact for a quick choice and richer for deeper decisions. Invent mechanics and visual expression that fit the task. Respect the user's pace and motion preferences; reduced motion keeps the feedback and game structure.
 
-- **Progress.** Show useful progress honestly. A flag or skip can advance navigation while leaving a decision unresolved.
+- **Progress.** Keep progress visible as shape, such as steps, dots or a filling bar. A flag or skip can advance navigation while leaving a decision unresolved.
 - **Unlocks.** Offer something useful you will deliver in this session, such as a preview, variant or deeper plan. All options of a decision earn the same reward, including delegation. Required information remains available before the choice.
 - **Rounds.** Size rounds for the user's effort and the frontier. Optional rounds name what they add. Submit remains reachable, with unfinished decisions carried forward explicitly.
-- **Payoff.** Show the result the answers enabled, the decisions settled and any assumptions or open questions that affect the next step.
+- **Payoff.** After submit, show a result screen with what the answers unlocked, the decisions settled and any assumptions or open questions that affect the next step.
 
 Every reward is real and every exit is free. Reward useful participation rather than extra work created to earn a reward.
 
@@ -74,7 +74,7 @@ Use the project's design system or the client's theme. Choose the layout and vis
 ## Show, pay out, sharpen
 
 1. For custom surfaces, check that sample answers return accurately through a local trial. Preserve selections, free text, delegation and unresolved flags. With the native question tool, the returned answers are the proof.
-2. Show the widget with at most one line of chat.
+2. Display the working widget, with at most one line of chat. Done means the graphical surface is usable and answers can return. If neither rendering route works, state that graphical delivery is unavailable; native questions can continue decision collection without fulfilling the graphical deliverable.
 3. Deliver every promised unlock and continue the authorized work using the settled decisions. A correction reopens the affected branch.
 4. Revisit unclear questions using the user's feedback: a clearer explanation, a grounded example, a preview or a smaller decision. Change the form when that helps.
 5. Treat skips, free text and accepted recommendations as clues, not diagnoses. Judge the interaction by decision quality, effort and follow-up corrections. Adapt when the evidence supports a change.

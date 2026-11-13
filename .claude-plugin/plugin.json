@@ -1,6 +1,6 @@
 {
   "name": "grilling-gamified-widget",
-  "description": "Gamifies a widget with the client's own tools: questions grounded in the codebase, varied forms, open and closed answers, live progress and real unlocks. Use when building or improving a question widget.",
+  "description": "Builds a visually gamified decision widget with the client's rendering tools: grounded questions, responsive graphics, progress and real unlocks. Use when creating or improving a question widget.",
   "author": {
     "name": "Tiziano Boccaccini"
   },
