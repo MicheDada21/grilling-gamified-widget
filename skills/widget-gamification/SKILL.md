@@ -9,7 +9,7 @@ description: "Gamifies a widget with the client's own tools: questions grounded 
 
 The widget is the interactive surface this conversation is about: a question widget you are about to show, one already shown, or one a skill or project asks you to build. With several candidates or none, ask which one and wait.
 
-The skill changes how the widget asks. What it collects stays fixed: every decision the original needed still gets an answer. A mechanic earns its place by getting a better answer or a faster one. The user's always-loaded rules for widgets, such as their language or a recommended option first, outrank this skill.
+The widget exists to settle decisions: when it closes, you and the user share one understanding of the work, and the user could defend each choice. The skill changes which questions the widget asks and how it asks them. Every decision the original needed still gets settled. A mechanic earns its place by getting a better answer or a faster one. The user's always-loaded rules for widgets, such as their language or a recommended option first, outrank this skill.
 
 ## Read the ground
 
@@ -18,6 +18,24 @@ Before writing a question, do the due diligence on what the user wants to act on
 Everything the ground answers leaves the widget. Each remaining question is built on something you found: a real name, a real file, a real conflict between two parts.
 
 The step is done when no question could be answered by reading the codebase or the conversation.
+
+## Map the decisions
+
+Lay out what remains as a decision tree: each decision branches into the decisions that hang off it. Add the decisions the user is making without noticing: what the request implies, and where work of this kind usually breaks.
+
+Each decision goes one of three ways.
+
+| The decision | Goes |
+| --- | --- |
+| Every option leads to the same work, or it concerns means that change neither cost nor risk | You decide, and state it as an assumption in the payoff |
+| Words can settle it: a name, a scope, a priority, a trade-off | A question |
+| It needs something to react to: how a thing looks, feels or flows | A question whose options are previews built from the ground. With no surface that can show them, prototype first and ask after |
+
+Order the questions by the frontier: the decisions whose prerequisites are all settled. A round asks frontier questions only, so no answer in a round changes another question in it. A question that hangs off an open answer waits: as a branch prepared for each pick where the surface can branch, otherwise in a next round built from the answers. A lookup still running holds back only the questions that depend on it.
+
+The first round holds the roots, the decisions the most others hang off. When the tree needs more than three rounds, open with one question on which branch to settle now and park the rest.
+
+The step is done when every decision is an assumption you will state or a question placed after everything it depends on.
 
 ## Pick the surface
 
@@ -50,11 +68,9 @@ Give each question the form that matches the shape of its answer.
 | No strong view | A wildcard that hands the choice to you |
 
 - One decision per question. Its options lead to different work, so each pick changes what you do next.
-- Ask about outcomes the user can judge, and keep the choice of means for yourself unless it changes cost or risk.
 - Draw the options from the ground: real names, real copy, real previews.
 - Alternate closed and open. Open each round with a closed question that takes one tap. Keep open questions to about one in three, each a field that starts as one line and grows with the answer, with a placeholder that shows the grain of answer you want. Every closed question offers a free-text way out.
 - Within a round, neighbouring questions use different forms.
-- Where the surface can branch, a later question asks about the consequence of an earlier pick instead of a fresh preference.
 - Put your own pick first and mark it.
 
 The step is done when every original decision maps to a question and each form follows from its answer shape.
@@ -64,14 +80,14 @@ The step is done when every original decision maps to a question and each form f
 Play at full by default: every answer gets a visible reaction at once. The bar moves, the next question reveals, an unlock opens. When the user asks for a quieter widget, keep the mechanics and drop the motion.
 
 - **Progress.** Keep it in view as shape: dots, steps, a filling bar. It moves on every answer and shows the distance to the next unlock.
-- **Unlocks.** An incentive option carries its reward on its face in a few words: an extra variant, a preview, a deeper plan, a bonus round. Finishing a round can carry one too. Promise only what you will deliver in this session.
-- **Rounds.** Group the questions into rounds of three to five. The first round alone is enough to proceed. Each further round is optional, shorter than the first and named by what it unlocks.
+- **Unlocks.** A reward pays for effort: an open answer, a finished round, a further round. The control that earns it shows it in a few words: an extra variant, a preview, a deeper plan. The options of one decision pay the same, so the answer stays the user's own. Promise only what you will deliver in this session.
+- **Rounds.** A round is one frontier, cut to three to five questions with the roots first. The first round alone is enough to proceed: where the user skips a later round, your picks stand as assumptions. Each further round is optional, shorter than the first and named by what it unlocks.
 - **Wildcard.** Picking the wildcard counts as a full answer and moves the round on.
-- **Payoff.** After submit, the reward is the result: one screen showing what the answers unlocked.
+- **Payoff.** After submit, the reward is the result: one screen showing what the answers unlocked, the decisions now settled and the assumptions you made in place of questions.
 
 Every reward is real and every exit is free: skipping a round costs nothing, and submit is reachable from every round.
 
-The step is done when each optional round names its unlock and each incentive option names a reward you can deliver.
+The step is done when each optional round names its unlock, and every reward pays for effort with something you can deliver.
 
 ## Make it self-evident
 
@@ -94,7 +110,9 @@ The step is done when the widget passes the one-glance test and every text fits 
 
 1. Where the surface allows it, submit a trial answer and check that it comes back as one message. With the native question tool, the returned answers are the proof.
 2. Show the widget with at most one line of chat.
-3. When the answers arrive, deliver every promised unlock, then continue the task with the answers.
-4. Read the round as evidence. A skipped question was unclear or unneeded. A free-text way out means the options missed. Long open answers ask for more open lines.
+3. When the answers arrive, deliver every promised unlock and state each assumption in one line, then continue the task with the answers. A correction from the user reopens that branch in a next round.
+4. Read the round as evidence. A skipped question was unclear or unneeded. A free-text way out means the options missed. Long open answers ask for more open lines. A round answered only with your picks held assumptions: state them next time and ask what lies past them. A wildcard on a question of look or feel asks for a preview.
 
 When the skill runs again on the same widget, change at least one form or mechanic on that evidence and name the change in one line.
+
+Inspired by Matt Pocock's grilling skill for the decision tree, the frontier and the split between facts and decisions.
