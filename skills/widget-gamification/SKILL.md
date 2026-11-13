@@ -71,6 +71,7 @@ Give each question the form that matches the shape of its answer.
 - Draw the options from the ground: real names, real copy, real previews.
 - Alternate closed and open. Open each round with a closed question that takes one tap. Keep open questions to about one in three, each a field that starts as one line and grows with the answer, with a placeholder that shows the grain of answer you want. Every closed question offers a free-text way out.
 - Within a round, neighbouring questions use different forms.
+- Every question carries a small "not clear" flag, apart from the wildcard: the wildcard means the user has no strong view, the flag means the question did not land. The flag takes an optional few words on what is unclear, moves the round on like any answer, and comes back in the returned message with the question it marks. On a surface with fixed option slots, the free-text way out carries it.
 - Put your own pick first and mark it.
 
 The step is done when every original decision maps to a question and each form follows from its answer shape.
@@ -93,6 +94,8 @@ The step is done when each optional round names its unlock, and every reward pay
 
 The widget passes the one-glance test when someone seeing it for the first time knows what to do before reading a word. Shape carries the instruction: chips invite a tap, a slider a drag, an empty line typing.
 
+A question is clear when the user can tell what each option changes. Get there by showing, within the copy budget: name the real thing the question is about, and present each option as what it would produce.
+
 Copy budget:
 
 - Question: ten words at most.
@@ -104,14 +107,15 @@ Cut any word whose removal leaves the widget just as clear.
 
 Lay out one question per view or one steady vertical rhythm. Spend one accent on the selected state and the main action, and mark your pick by position and weight. Use the project's design system or the client's theme variables. Every control is reachable by keyboard, labelled for screen readers, readable without color and whole on a narrow screen.
 
-The step is done when the widget passes the one-glance test and every text fits the budget.
+The step is done when the widget passes the one-glance test, every text fits the budget and each option shows what it changes.
 
 ## Show, pay out, sharpen
 
 1. Where the surface allows it, submit a trial answer and check that it comes back as one message. With the native question tool, the returned answers are the proof.
 2. Show the widget with at most one line of chat.
 3. When the answers arrive, deliver every promised unlock and state each assumption in one line, then continue the task with the answers. A correction from the user reopens that branch in a next round.
-4. Read the round as evidence. A skipped question was unclear or unneeded. A free-text way out means the options missed. Long open answers ask for more open lines. A round answered only with your picks held assumptions: state them next time and ask what lies past them. A wildcard on a question of look or feel asks for a preview.
+4. Keep every flagged question open: it stays the user's decision, and the questions that hang off it wait with it. Ask it again in the next widget from a new angle, using what the user wrote on the flag: another form, an example taken from the ground, a preview of each option, or two smaller questions in its place. Both the wording and the form are new.
+5. Read the round as evidence. A skipped question was unclear or unneeded. A free-text way out means the options missed. Long open answers ask for more open lines. A round answered only with your picks held assumptions: state them next time and ask what lies past them. A wildcard on a question of look or feel asks for a preview.
 
 When the skill runs again on the same widget, change at least one form or mechanic on that evidence and name the change in one line.
 
