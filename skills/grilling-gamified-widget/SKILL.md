@@ -76,7 +76,7 @@ Use the project's design system or the client's theme. Choose the layout and vis
 1. For custom surfaces, check that sample answers return accurately through a local trial. Preserve selections, free text, delegation and unresolved flags. With the native question tool, the returned answers are the proof.
 2. Display the working widget, with at most one line of chat. Done means the graphical surface is usable and answers can return. If neither rendering route works, state that graphical delivery is unavailable; native questions can continue decision collection without fulfilling the graphical deliverable.
 3. Deliver every promised unlock and continue the authorized work using the settled decisions. A correction reopens the affected branch.
-4. Revisit unclear questions using the user's feedback: a clearer explanation, a grounded example, a preview or a smaller decision. Change the form when that helps.
+4. Ask each flagged question again in the next widget, from a new angle built on the user's feedback: a clearer explanation, a grounded example, a preview or a smaller decision. The repeat changes both the wording and the form.
 5. Treat skips, free text and accepted recommendations as clues, not diagnoses. Judge the interaction by decision quality, effort and follow-up corrections. Adapt when the evidence supports a change.
 
 Inspired by [Matt Pocock's grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) for the decision tree, frontier and distinction between facts and decisions. Consult the source when reviewing those foundations; this skill is self-contained for execution.
